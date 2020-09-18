@@ -9,20 +9,6 @@ public class PlayerMoved : MonoBehaviour
     [SerializeField] float speed; // oyuncunun hizini saklar
     bool moved;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
-
     void FixedUpdate()
     {
         Move();
@@ -67,5 +53,10 @@ public class PlayerMoved : MonoBehaviour
         float x = transform.position.x;
         x = Mathf.Clamp(x, -1.25f, 1.25f);
         transform.position = new Vector3(x, transform.position.y, transform.position.z);
+    }
+
+    public bool GetMove()
+    {
+        return moved;
     }
 }
