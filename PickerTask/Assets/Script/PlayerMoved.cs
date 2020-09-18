@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMoved : MonoBehaviour
 {
-
+    public Rigidbody rbPlayer;
     [SerializeField] float speedModifier; // ekranda kaydırma islemi hassasiyetini saglar
     [SerializeField] float speed; // oyuncunun hizini saklar
     bool moved;
@@ -19,14 +19,14 @@ public class PlayerMoved : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
+        MoveSpeed();
+        SmoothDirection();
+
     }
 
     void FixedUpdate()
     {
-        MoveSpeed();
-        Move();
-        SmoothDirection();
     }
 
 
@@ -42,8 +42,12 @@ public class PlayerMoved : MonoBehaviour
 
             if (touch.phase == TouchPhase.Moved)
             {
-                transform.position = new Vector3(transform.position.x + touch.deltaPosition.x * speedModifier, transform.position.y, transform.position.z);
+                rbPlayer.velocity = new Vector3(rbPlayer.velocity.x + touch.deltaPosition.x * speedModifier, rbPlayer.velocity.y, rbPlayer.velocity.z);
             }
+        }
+        else
+        {
+            rbPlayer.velocity = Vector3.zero;
         }
     }
 
@@ -52,7 +56,8 @@ public class PlayerMoved : MonoBehaviour
     {
         if (moved)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + speed * Time.deltaTime);
+            rbPlayer.velocity = new Vector3(rbPlayer.velocity.x, rbPlayer.velocity.y, speed * 1f);
+
         }
     }
 

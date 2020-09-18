@@ -602,6 +602,9 @@
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/GitHub/PickerTask/PickerTask/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.DeviceSimulator.Tests.Common">
+      <HintPath>D:/GitHub/PickerTask/PickerTask/Library/ScriptAssemblies/Unity.DeviceSimulator.Tests.Common.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/GitHub/PickerTask/PickerTask/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -614,17 +617,14 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/GitHub/PickerTask/PickerTask/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.DeviceSimulator.Editor">
+      <HintPath>D:/GitHub/PickerTask/PickerTask/Library/ScriptAssemblies/Unity.DeviceSimulator.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/GitHub/PickerTask/PickerTask/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/GitHub/PickerTask/PickerTask/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.DeviceSimulator.Tests.Common">
-      <HintPath>D:/GitHub/PickerTask/PickerTask/Library/ScriptAssemblies/Unity.DeviceSimulator.Tests.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.DeviceSimulator.Editor">
-      <HintPath>D:/GitHub/PickerTask/PickerTask/Library/ScriptAssemblies/Unity.DeviceSimulator.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

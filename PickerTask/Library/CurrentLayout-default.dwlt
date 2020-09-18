@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 395
     height: 741
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -72,10 +72,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 741
-  m_MinSize: {x: 708, y: 492}
-  m_MaxSize: {x: 18003, y: 14042}
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 58
+  controlID: 129
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 59
+  controlID: 40
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -299,8 +299,8 @@ MonoBehaviour:
     controlPanelFoldoutValues: 010101
     extensionNames: []
     extensionStates: []
-    scale: 28
-    fitToScreenEnabled: 1
+    scale: 25
+    fitToScreenEnabled: 0
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
     friendlyName: Samsung Galaxy J7 (2017)
@@ -342,9 +342,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.22963814, y: 1.4328508, z: 0.36562693}
+    m_Target: {x: 5.113453, y: -2.3513849, z: 6.4685984}
     speed: 2
-    m_Value: {x: 0.22963814, y: 1.4328508, z: 0.36562693}
+    m_Value: {x: 5.113453, y: -2.3513849, z: 6.4685984}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -390,20 +390,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.14940001, y: -0.031811893, z: 0.004782164, w: -0.98846}
+    m_Target: {x: -0.23874184, y: -0.68600714, z: 0.2568491, w: -0.63784343}
     speed: 2
-    m_Value: {x: -0.14936951, y: -0.0318054, z: 0.0047811875, w: -0.9882582}
+    m_Value: {x: -0.24060301, y: -0.6850896, z: 0.2588525, w: -0.63699114}
   m_Size:
-    m_Target: 2.5713787
+    m_Target: 17.006437
     speed: 2
-    m_Value: 2.5713787
+    m_Value: 17.006437
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 0.5
-    m_SpeedNormalized: 0.26999998
+    m_Speed: 0.3
+    m_SpeedNormalized: 0.14999998
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -414,11 +414,11 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.24289869, y: -0.055045992, z: 0.013852308, w: -0.968603}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
-  m_SceneVisActive: 0
+  m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 --- !u!114 &13
@@ -460,20 +460,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Material
+    - Assets/Prefab
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Material
+  - Assets/Prefab
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\GitHub\PickerTask\PickerTask
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: aa340000
-    m_LastClickedID: 13482
-    m_ExpandedIDs: 000000009834000000ca9a3b
+    m_SelectedIDs: 26350000
+    m_LastClickedID: 13606
+    m_ExpandedIDs: 000000001435000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,7 +501,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000098340000
+    m_ExpandedIDs: 0000000014350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000a0450000c04e0000484900006839000064390000784000002e3700000000000080340000bc9afeff74360000d61dfeff9cdaffff2a3800001e3800009c370000e63b000096580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -652,21 +652,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 38f1ffff52f1fffff8f1ffff6cfbffff
+      m_ExpandedIDs: 42f3ffff5cf3ffff5ef3ffff60f4ffff7af4ffff7cf4ffffc0f5ffffdaf5ffff7cf6ffff6cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: FirstLevelObj (12)
-        m_OriginalName: FirstLevelObj (12)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 15510
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
