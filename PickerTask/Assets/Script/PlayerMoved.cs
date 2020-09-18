@@ -19,14 +19,15 @@ public class PlayerMoved : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        MoveSpeed();
-        SmoothDirection();
+
 
     }
 
     void FixedUpdate()
     {
+        Move();
+        MoveSpeed();
+        WallControl();
     }
 
 
@@ -61,7 +62,7 @@ public class PlayerMoved : MonoBehaviour
         }
     }
 
-    void SmoothDirection()
+    void WallControl()
     {
         float x = transform.position.x;
         x = Mathf.Clamp(x, -1.25f, 1.25f);
