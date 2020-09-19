@@ -5,7 +5,9 @@ using UnityEngine;
 public class FirstLevelObj : MonoBehaviour
 {
     PlayerMoved playerMoved;
+    Rigidbody rbObj;
     [SerializeField] GameObject firstObj;
+    GameObject spawnObj;
     float positionX;
     float positionZ;
     bool stopSpawn;
@@ -38,7 +40,7 @@ public class FirstLevelObj : MonoBehaviour
                     positionX = -1;
                 }
 
-                Instantiate(firstObj, new Vector3(positionX, 0.125f, positionZ), Quaternion.identity);
+                spawnObj = Instantiate(firstObj, new Vector3(positionX, 0.125f, positionZ), Quaternion.identity);
                 positionX++;
                 positionZ++;
 

@@ -8,11 +8,15 @@ public class PlayerMoved : MonoBehaviour
     [SerializeField] float speedModifier; // ekranda kaydırma islemi hassasiyetini saglar
     [SerializeField] float speed; // oyuncunun hizini saklar
     bool moved;
+    bool pitControl;
 
     void FixedUpdate()
     {
-        Move();
-        MoveSpeed();
+        if (!pitControl)
+        {
+            Move();
+            MoveSpeed();
+        }
         WallControl();
     }
 
@@ -44,7 +48,6 @@ public class PlayerMoved : MonoBehaviour
         if (moved)
         {
             rbPlayer.velocity = new Vector3(rbPlayer.velocity.x, rbPlayer.velocity.y, speed * 1f);
-
         }
     }
 
@@ -58,5 +61,15 @@ public class PlayerMoved : MonoBehaviour
     public bool GetMove()
     {
         return moved;
+    }
+
+    public void SetMove(bool moved)
+    {
+        this.moved = moved;
+    }
+
+    public void SetPitControl(bool pitControl)
+    {
+        this.pitControl = pitControl;
     }
 }

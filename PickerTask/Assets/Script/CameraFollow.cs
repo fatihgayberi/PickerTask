@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject tool;
+    [SerializeField] float fear;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,6 @@ public class CameraFollow : MonoBehaviour
 
     void FollowPlayer()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z - 5.5f);
+        transform.position = new Vector3(transform.position.x, transform.position.y, tool.transform.position.z - fear);
     }
 }
