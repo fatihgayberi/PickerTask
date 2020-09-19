@@ -10,7 +10,7 @@ public class PlayerMoved : MonoBehaviour
     bool moved; // ilk dokunma ile hareketin baslamasini saglar.
     bool pitControl; // toolun hareketini durdurmak icin kullanilir.
 
-    void FixedUpdate()
+    private void Update()
     {
         if (!pitControl)
         {
@@ -19,7 +19,6 @@ public class PlayerMoved : MonoBehaviour
         }
         WallControl();
     }
-
 
     // sag sol yapmasini saglar
     void Move()

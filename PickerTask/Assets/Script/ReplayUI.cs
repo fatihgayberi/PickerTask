@@ -14,12 +14,6 @@ public class ReplayUI : MonoBehaviour
         replayBtn.onClick.AddListener(TaskOnTouchReplay);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void TaskOnTouchReplay()
     {
         SceneManager.LoadScene("SampleScene");

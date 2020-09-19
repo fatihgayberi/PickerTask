@@ -3,25 +3,28 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraFollow
     - Destroyer
+    - FinishControl
     - FirstLevelObj
     - ObjeControl
     - PitObject
     - PlayerMoved
+    - ReplayUI
     Unity.DeviceSimulator.Editor.dll:
     - Unity.DeviceSimulator.SimulatorWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -63,18 +66,38 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11134}
     - Class: 114
-      Script: {instanceID: 11958}
+      Script: {instanceID: 11136}
     - Class: 114
-      Script: {instanceID: 12938}
+      Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 13576}
+      Script: {instanceID: 11364}
     - Class: 114
-      Script: {instanceID: 22944}
+      Script: {instanceID: 11426}
     - Class: 114
-      Script: {instanceID: 25314}
+      Script: {instanceID: 11474}
+    - Class: 114
+      Script: {instanceID: 11766}
+    - Class: 114
+      Script: {instanceID: 11784}
+    - Class: 114
+      Script: {instanceID: 11976}
+    - Class: 114
+      Script: {instanceID: 12238}
+    - Class: 114
+      Script: {instanceID: 12688}
+    - Class: 114
+      Script: {instanceID: 12714}
+    - Class: 114
+      Script: {instanceID: 12900}
+    - Class: 114
+      Script: {instanceID: 12972}
+    - Class: 114
+      Script: {instanceID: 13068}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
@@ -86,7 +109,27 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 199
       Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: aeb62f729c52c814dec86c47dcac1471
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -101,6 +144,12 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
+      Hash: b41f6a02beff5d31b9210834dce1767e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UICanvasManager
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -111,6 +160,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 0e2dcecfc1a59863d6161482eaa244b3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EpicToonFX
+    className: ETFXPitchRandomizer
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -137,10 +192,10 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
+      Hash: 096a50f6a3d89528ac732e9bb63631c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ETFXSceneManager
   - hash:
       serializedVersion: 2
       Hash: 499fd23433e68e265d153aa6b95d0047
@@ -179,10 +234,22 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 5058e62971372d10db24fe80294c7a3d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ETFXProjectileScript
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 7e467939d839cb80cc04dcd49f2c6103
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FinishControl
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -197,7 +264,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 885019f10621423e934b63a9fdc691af
+      Hash: c7d9039996784baee5497d8645baf018
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraFollow
@@ -269,6 +336,12 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: e5a940392e377b6fc4f06bf0654b30dd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PitObject
+  - hash:
+      serializedVersion: 2
       Hash: 5cc439bf63c0539d39588e69465ac2ab
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -285,6 +358,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: b5aaf686465544e9e949e46e293afee1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EpicToonFX
+    className: ETFXMouseOrbit
+  - hash:
+      serializedVersion: 2
+      Hash: 0912db8419735ecb16044b834208729d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EpicToonFX
+    className: ETFXLoopScript
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -305,6 +390,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: e888ef4305b8fac9cd5510fefa0636bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EpicToonFX
+    className: ETFXFireProjectile
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -323,16 +414,22 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
+      Hash: 79566861074b80c5467fa81dddcf4f5a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EpicToonFX
+    className: ETFXRotation
   - hash:
       serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 4c46e17c3c41d26d7d3fbb3bc9df74bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ReplayUI
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -389,6 +486,24 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 8e5e00ca42eeebc1eae2f91fabb1ee02
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EpicToonFX
+    className: ETFXButtonScript
+  - hash:
+      serializedVersion: 2
+      Hash: a4900d574c1d1a9001f0f83b0dddb24d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ParticleEffectsLibrary
+  - hash:
+      serializedVersion: 2
+      Hash: 32cebb2ae4cddf0e4d07ddef22ca3a5c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EpicToonFX
+    className: ETFXTarget
+  - hash:
+      serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -413,6 +528,18 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 33881f012609790e1adff28e7ff5fc27
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Destroyer
+  - hash:
+      serializedVersion: 2
+      Hash: 2890c468cf196dca883ea02bde96343e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: EpicToonFX
+    className: ETFXLightFade
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -423,6 +550,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: e5abf1df1fa445ed6462ef6dc81e1e60
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjeControl
   - hash:
       serializedVersion: 2
       Hash: 8cd1cbba27f3cb1717254f668e9e0d5a
@@ -459,6 +592,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 24b2edb739e02ab9678256f4cc52b87d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PEButtonScript
   - hash:
       serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
@@ -525,102 +664,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: e5abf1df1fa445ed6462ef6dc81e1e60
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ObjeControl
-  - hash:
-      serializedVersion: 2
-      Hash: 33881f012609790e1adff28e7ff5fc27
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Destroyer
-  - hash:
-      serializedVersion: 2
-      Hash: d2ba325ad7fd4ecdee019ea5c1810449
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PitObject
-  - hash:
-      serializedVersion: 2
-      Hash: b41f6a02beff5d31b9210834dce1767e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UICanvasManager
-  - hash:
-      serializedVersion: 2
-      Hash: 0e2dcecfc1a59863d6161482eaa244b3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: EpicToonFX
-    className: ETFXPitchRandomizer
-  - hash:
-      serializedVersion: 2
-      Hash: 096a50f6a3d89528ac732e9bb63631c7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ETFXSceneManager
-  - hash:
-      serializedVersion: 2
-      Hash: 5058e62971372d10db24fe80294c7a3d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ETFXProjectileScript
-  - hash:
-      serializedVersion: 2
-      Hash: b5aaf686465544e9e949e46e293afee1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: EpicToonFX
-    className: ETFXMouseOrbit
-  - hash:
-      serializedVersion: 2
-      Hash: 0912db8419735ecb16044b834208729d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: EpicToonFX
-    className: ETFXLoopScript
-  - hash:
-      serializedVersion: 2
-      Hash: e888ef4305b8fac9cd5510fefa0636bf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: EpicToonFX
-    className: ETFXFireProjectile
-  - hash:
-      serializedVersion: 2
-      Hash: 79566861074b80c5467fa81dddcf4f5a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: EpicToonFX
-    className: ETFXRotation
-  - hash:
-      serializedVersion: 2
-      Hash: 8e5e00ca42eeebc1eae2f91fabb1ee02
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: EpicToonFX
-    className: ETFXButtonScript
-  - hash:
-      serializedVersion: 2
-      Hash: a4900d574c1d1a9001f0f83b0dddb24d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ParticleEffectsLibrary
-  - hash:
-      serializedVersion: 2
-      Hash: 32cebb2ae4cddf0e4d07ddef22ca3a5c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: EpicToonFX
-    className: ETFXTarget
-  - hash:
-      serializedVersion: 2
-      Hash: 2890c468cf196dca883ea02bde96343e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: EpicToonFX
-    className: ETFXLightFade
-  - hash:
-      serializedVersion: 2
-      Hash: 24b2edb739e02ab9678256f4cc52b87d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PEButtonScript
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
