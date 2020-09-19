@@ -5,12 +5,10 @@ using UnityEngine;
 public class FirstLevelObj : MonoBehaviour
 {
     PlayerMoved playerMoved;
-    Rigidbody rbObj;
     [SerializeField] GameObject firstObj;
-    GameObject spawnObj;
-    float positionX;
-    float positionZ;
-    bool stopSpawn;
+    float positionX; // firstObj' nin ilk spawn olacagi x pozisyonunu saklar.
+    float positionZ; // firstObj' nin ilk spawn olacagi z pozisyonunu saklar.
+    bool stopSpawn; // spawn yapilmasini durdurur.
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +25,7 @@ public class FirstLevelObj : MonoBehaviour
         StartCoroutine(ObjectSpawner());
     }
 
+    // firstObj nin belirlenen konumda 0.15f birim saniye araliklar ile spawn olmasini saglar.
     IEnumerator ObjectSpawner()
     {
         if (playerMoved.GetMove() && stopSpawn)
@@ -40,7 +39,7 @@ public class FirstLevelObj : MonoBehaviour
                     positionX = -1;
                 }
 
-                spawnObj = Instantiate(firstObj, new Vector3(positionX, 0.125f, positionZ), Quaternion.identity);
+                Instantiate(firstObj, new Vector3(positionX, 0.125f, positionZ), Quaternion.identity);
                 positionX++;
                 positionZ++;
 

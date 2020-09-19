@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d43aa7cb22f71540b97ae6cab47ff3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstObj: {fileID: 4624777835816076708, guid: 497a07fb9ef056143bed8749c305e2e0,
+  firstObj: {fileID: 5060072879795136064, guid: 878cbb97846ebd2478c75737dd42f5dd,
     type: 3}
 --- !u!1 &6831276472401681244
 GameObject:
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rbPlayer: {fileID: 4827454292975834824}
-  speedModifier: 0.05
+  speedModifier: 0.1
   speed: 5
 --- !u!1 &6831276472699292063
 GameObject:

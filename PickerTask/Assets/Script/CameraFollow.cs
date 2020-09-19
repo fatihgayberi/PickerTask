@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] GameObject tool;
-    [SerializeField] float fear;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject tool; // tool objesini tutar.
+    [SerializeField] float fear; // kameranin toola olan uzakligini saklar.
 
     // Update is called once per frame
     void Update()
@@ -18,6 +13,7 @@ public class CameraFollow : MonoBehaviour
         FollowPlayer();
     }
 
+    // kameranin toolu takip etmesini saglar.
     void FollowPlayer()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, tool.transform.position.z - fear);

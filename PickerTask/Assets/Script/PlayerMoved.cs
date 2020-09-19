@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerMoved : MonoBehaviour
 {
-    public Rigidbody rbPlayer;
-    [SerializeField] float speedModifier; // ekranda kaydırma islemi hassasiyetini saglar
-    [SerializeField] float speed; // oyuncunun hizini saklar
-    bool moved;
-    bool pitControl;
+    public Rigidbody rbPlayer; // tool objesinin rigidbody' si.
+    [SerializeField] float speedModifier; // ekranda kaydırma islemi hassasiyetini saglar.
+    [SerializeField] float speed; // oyuncunun hizini saklar.
+    bool moved; // ilk dokunma ile hareketin baslamasini saglar.
+    bool pitControl; // toolun hareketini durdurmak icin kullanilir.
 
     void FixedUpdate()
     {
@@ -24,6 +24,7 @@ public class PlayerMoved : MonoBehaviour
     // sag sol yapmasini saglar
     void Move()
     {
+        // dokunulan konuma hareket etmesini saglar.
         if (Input.touchCount > 0)
         {
             Touch touch;
@@ -36,7 +37,7 @@ public class PlayerMoved : MonoBehaviour
                 rbPlayer.velocity = new Vector3(rbPlayer.velocity.x + touch.deltaPosition.x * speedModifier, rbPlayer.velocity.y, rbPlayer.velocity.z);
             }
         }
-        else
+        else // parmak ekrandan cekildiginde tool' un savrulmasini engeller.
         {
             rbPlayer.velocity = Vector3.zero;
         }
@@ -51,6 +52,7 @@ public class PlayerMoved : MonoBehaviour
         }
     }
 
+    // tool' un platform disina cikmasini engeller.
     void WallControl()
     {
         float x = transform.position.x;

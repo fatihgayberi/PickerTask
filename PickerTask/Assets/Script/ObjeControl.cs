@@ -14,24 +14,22 @@ public class ObjeControl : MonoBehaviour
         playerMoved = FindObjectOfType<PlayerMoved>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // basarim icin gerekli kontrolleri saglar.
     private void OnTriggerEnter(Collider other)
     {
+        // toolun durmasini saglar.
         if (other.gameObject.name.Contains("Tool"))
         {
             StopTool();
         }
+        // firsObj nin Y pozisyonunda hareket edebilmesini serbest kilar.
         if (other.gameObject.name.Contains(firstObj.name))
         {
             other.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezePositionY;
         }
     }
 
+    // toolu durdurur.
     void StopTool()
     {
         playerMoved.SetPitControl(true);
