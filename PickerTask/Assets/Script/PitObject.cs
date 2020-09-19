@@ -1,42 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PitObject : MonoBehaviour
 {
-    [SerializeField] GameObject barrierLeft;
-    [SerializeField] GameObject barrierRright;
+    FinishControl finishControl;
     [SerializeField] GameObject firstObj;
     [SerializeField] GameObject firstObjParticle;
-    [SerializeField] GameObject tool;
-    [SerializeField] GameObject winParticle;
-    [SerializeField] GameObject pitPath;
-    [SerializeField] GameObject replayUI;
-    int counter; // pite dusen firstObjleri sayar.
-    Animator animLeft; // left barrierin animasyonu.
-    Animator animRight; // right barrierin animasyonu.
-    bool finish; // oyunun basarili oldugunu belirtir.
-    float smooth = 3; // pith patin smooth lerp degerini saklar.
+    [SerializeField] Text counterTxt;
+    static int counter = 0; // pite dusen firstObjleri sayar.
 
     private void Start()
     {
-        animLeft = barrierLeft.GetComponent<Animator>();
-        animRight = barrierRright.GetComponent<Animator>();
-    }
-
-    private void Update()
-    {
-        PitPathPositionUpdate();
+        finishControl = FindObjectOfType<FinishControl>();
     }
 
     // pite dusen objeleri siler ve particle olusturur.
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name.Contains(firstObj.name))
+        if (other.gameObject.name.Contains(firstObj.name) && other.transform.childCount > 0)
         {
             counter++;
+            CounterText(counter);
             FirstObjDestroyer(other);
-            StartCoroutine(FinishControl(counter));
+            StartCoroutine(finishControl.WinControl());
         }
     }
 
@@ -50,33 +38,18 @@ public class PitObject : MonoBehaviour
         }
     }
 
-    // finish icin counterin kontrolunu saglar.
-    IEnumerator FinishControl(int counter)
+    public int GetCounter()
     {
-        yield return new WaitForSeconds(3f);
-
-        // eger basarili ise win particleyi sesi ile beraber oynatip bariyerleri animasyon ile acar.
-        if (counter >= 5 && !finish)
-        {
-            finish = true;
-            Instantiate(winParticle, tool.transform.position, Quaternion.identity);
-            animLeft.SetBool("LeftBarrier", true);
-            animRight.SetBool("RightBarrier", true);
-        }
-        else
-        {
-            // basarisiz oldugunu soyleyn ekrani yukler.
-            replayUI.SetActive(true);
-        }
+        return counter;
     }
 
-    // pitPath ile yolu tamamlar.
-    void PitPathPositionUpdate()
+    public void SetCounter(int count)
     {
-        if (finish)
-        {
-            Vector3 newPosition = new Vector3(0f, 0f, 47.25f); // pitPathin yolu tamamlamak icin ideal pozisyonu.
-            pitPath.transform.position = Vector3.Lerp(pitPath.transform.position, newPosition, Time.deltaTime * smooth);
-        }
+        counter = count;
+    }
+
+    void CounterText(int count)
+    {
+        counterTxt.text = count + " / 20";
     }
 }

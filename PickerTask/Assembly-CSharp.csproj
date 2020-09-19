@@ -78,6 +78,7 @@
     <Compile Include="Assets\Epic Toon FX\Epic Toon FX\Scripts\ETFXRotation.cs" />
     <Compile Include="Assets\Script\CameraFollow.cs" />
     <Compile Include="Assets\Script\Destroyer.cs" />
+    <Compile Include="Assets\Script\FinishControl.cs" />
     <Compile Include="Assets\Script\FirstLevelObj.cs" />
     <Compile Include="Assets\Script\ObjeControl.cs" />
     <Compile Include="Assets\Script\PitObject.cs" />
