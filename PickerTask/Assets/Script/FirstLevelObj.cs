@@ -39,7 +39,7 @@ public class FirstLevelObj : MonoBehaviour
                     positionX = -1;
                 }
 
-                Instantiate(firstObj, new Vector3(positionX, 0.125f, positionZ), Quaternion.identity);
+                Instantiate(firstObj, new Vector3(positionX, 0.1f, positionZ), Quaternion.identity);
                 positionX++;
                 positionZ++;
 

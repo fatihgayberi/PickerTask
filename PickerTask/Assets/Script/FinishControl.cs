@@ -41,7 +41,7 @@ public class FinishControl : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         // eger basarili ise win particleyi sesi ile beraber oynatip bariyerleri animasyon ile acar.
-        if (pitObject.GetCounter() >= 20 && !finish)
+        if (pitObject.GetCounter() >= 10 && !finish)
         {
             finish = true;
             Instantiate(winParticle, tool.transform.position, Quaternion.identity);
@@ -51,7 +51,7 @@ public class FinishControl : MonoBehaviour
             yield return new WaitForSeconds(2f);
             playerMoved.SetPitControl(false);
         }
-        if (pitObject.GetCounter() < 20 && !finish)
+        if (pitObject.GetCounter() < 10 && !finish)
         {
             // basarisiz oldugunu soyleyen ekrani yukler.
             replayUI.SetActive(true);
