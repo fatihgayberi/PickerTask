@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjeControl : MonoBehaviour
-{
-    [SerializeField] GameObject tool;
-    [SerializeField] GameObject firstObj;
+{  
     PlayerMoved playerMoved;
+    [SerializeField] GameObject tool;
+    [SerializeField] GameObject firstObj;  
 
     // Start is called before the first frame update
     void Start()

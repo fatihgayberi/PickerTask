@@ -16,8 +16,9 @@ public class FinishControl : MonoBehaviour
     [SerializeField] GameObject pitPath;
     [SerializeField] Sprite starActive;
     [SerializeField] GameObject star1;
-    Animator animLeft; // left barrierin animasyonu.
-    Animator animRight; // right barrierin animasyonu.
+    Animation animLeft; // left barrierin animasyonu.
+    Animation animRight; // right barrierin animasyonu.
+    Animation animWin; // tool un platform degisme animasyonu.
 
     float smooth = 3; // pith patin smooth lerp degerini saklar.
     bool finish; // oyunun basarili oldugunu belirtir.
@@ -26,8 +27,9 @@ public class FinishControl : MonoBehaviour
     {
         pitObject = FindObjectOfType<PitObject>();
         playerMoved = FindObjectOfType<PlayerMoved>();
-        animLeft = barrierLeft.GetComponent<Animator>();
-        animRight = barrierRright.GetComponent<Animator>();
+        animLeft = barrierLeft.GetComponent<Animation>();
+        animRight = barrierRright.GetComponent<Animation>();
+        animWin = tool.GetComponent<Animation>();
     }
 
     private void Update()
@@ -45,15 +47,15 @@ public class FinishControl : MonoBehaviour
         {
             finish = true;
             Instantiate(winParticle, tool.transform.position, Quaternion.identity);
-            animLeft.SetBool("LeftBarrier", true);
-            animRight.SetBool("RightBarrier", true);
+            animLeft.Play();
+            animRight.Play();
             star1.gameObject.GetComponent<Image>().sprite = starActive;
             yield return new WaitForSeconds(2f);
-            playerMoved.SetPitControl(false);
+            animWin.Play();
         }
+        // basarisiz oldugunu soyleyen ekrani yukler.
         if (pitObject.GetCounter() < 10 && !finish)
         {
-            // basarisiz oldugunu soyleyen ekrani yukler.
             replayUI.SetActive(true);
             gamePlayUI.SetActive(false);
             pitObject.SetCounter(0);

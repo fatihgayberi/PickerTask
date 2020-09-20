@@ -36,7 +36,8 @@ public class PlayerMoved : MonoBehaviour
                 rbPlayer.velocity = new Vector3(rbPlayer.velocity.x + touch.deltaPosition.x * speedModifier, rbPlayer.velocity.y, rbPlayer.velocity.z);
             }
         }
-        else // parmak ekrandan cekildiginde tool' un savrulmasini engeller.
+        // parmak ekrandan cekildiginde tool' un savrulmasini engeller.
+        else
         {
             rbPlayer.velocity = Vector3.zero;
         }
