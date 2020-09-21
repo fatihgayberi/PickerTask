@@ -6,10 +6,12 @@ public class WinFinish : MonoBehaviour
 {
     [SerializeField] GameObject finishTxt;
     [SerializeField] GameObject confettiParticle;
+    [SerializeField] GameObject gamePlayUI;
 
     private void OnTriggerEnter(Collider other)
     {
         finishTxt.gameObject.SetActive(true);
+        gamePlayUI.gameObject.SetActive(false);
         ConfettiMaker();
     }
 

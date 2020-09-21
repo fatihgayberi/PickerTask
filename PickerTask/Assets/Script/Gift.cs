@@ -21,14 +21,14 @@ public class Gift: MonoBehaviour
         Instantiate(giftParticle, thisPosition, Quaternion.identity);
         StartCoroutine(SizeUp(other));
         this.rendThis.enabled = false;
-        Destroy(this.gameObject, 0.75f);
+        Destroy(this.gameObject, 1f);
     }
 
     IEnumerator SizeUp(Collider other)
     {
         tool.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
         sizeUpTxt.gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.75f);
         sizeUpTxt.gameObject.SetActive(false);        
     }
 }

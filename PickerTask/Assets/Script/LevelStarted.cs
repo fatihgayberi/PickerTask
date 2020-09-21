@@ -42,7 +42,7 @@ public class LevelStarted : MonoBehaviour
                     positionX = -1;
                 }
 
-                Instantiate(levelObj, new Vector3(positionX, levelObj.transform.position.y, positionZ), Quaternion.identity);
+                Instantiate(levelObj, new Vector3(positionX, levelObj.transform.position.y, positionZ), Quaternion.Euler(0f, 0f, 90f));
                 positionX++;
                 positionZ++;
 
