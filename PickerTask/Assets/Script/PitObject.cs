@@ -10,7 +10,7 @@ public class PitObject : MonoBehaviour
     [SerializeField] GameObject firstObjParticle;
     [SerializeField] Text counterTxt;
     Vector3 empty;
-    static int counter = 0; // pite dusen firstObjleri sayar.
+    static int counter = 0; // pite dusen Objleri sayar.
 
     private void Start()
     {

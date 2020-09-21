@@ -14,10 +14,7 @@ public class Destroyer : MonoBehaviour
     // geride kalan objeleri ekrandan temizler
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name.Contains(firstObj.name))
-        {
-            Destroy(other.gameObject);
-        }
+        Destroy(other.gameObject);
     }
 
     // destroyerin sabit x ve y konumunda ilerlemesini saglar.

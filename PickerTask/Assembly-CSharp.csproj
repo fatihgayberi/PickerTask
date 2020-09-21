@@ -79,11 +79,13 @@
     <Compile Include="Assets\Script\CameraFollow.cs" />
     <Compile Include="Assets\Script\Destroyer.cs" />
     <Compile Include="Assets\Script\FinishControl.cs" />
-    <Compile Include="Assets\Script\FirstLevelObj.cs" />
+    <Compile Include="Assets\Script\Gift.cs" />
+    <Compile Include="Assets\Script\LevelStarted.cs" />
     <Compile Include="Assets\Script\ObjeControl.cs" />
     <Compile Include="Assets\Script\PitObject.cs" />
     <Compile Include="Assets\Script\PlayerMoved.cs" />
     <Compile Include="Assets\Script\ReplayUI.cs" />
+    <Compile Include="Assets\Script\SecondLevelObj.cs" />
     <None Include="Assets\Epic Toon FX\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />
     <None Include="Assets\Epic Toon FX\Epic Toon FX\Prefabs\Combat\Combat FX.txt" />
     <None Include="Assets\Epic Toon FX\Epic Toon FX\Prefabs\Interactive\Interactive FX.txt" />

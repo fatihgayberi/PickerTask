@@ -7,8 +7,8 @@ public class PlayerMoved : MonoBehaviour
     public Rigidbody rbPlayer; // tool objesinin rigidbody' si.
     [SerializeField] float speedModifier; // ekranda kaydırma islemi hassasiyetini saglar.
     [SerializeField] float speed; // oyuncunun hizini saklar.
-    bool moved; // ilk dokunma ile hareketin baslamasini saglar.
-    bool pitControl; // toolun hareketini durdurmak icin kullanilir.
+    bool moved = false; // ilk dokunma ile hareketin baslamasini saglar.
+    bool pitControl = false; // toolun hareketini durdurmak icin kullanilir.
 
     private void Update()
     {
