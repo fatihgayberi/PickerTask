@@ -9,17 +9,18 @@ public class FinishControl : MonoBehaviour
     PlayerMoved playerMoved;
     [SerializeField] GameObject barrierLeft;
     [SerializeField] GameObject barrierRright;
-    [SerializeField] GameObject tool;
+    [SerializeField] GameObject toolParent;
     [SerializeField] GameObject winParticle;
     [SerializeField] GameObject replayUI;
     [SerializeField] GameObject gamePlayUI;
     [SerializeField] GameObject pitPath;
     [SerializeField] Sprite starActive;
-    [SerializeField] GameObject star1;
+    [SerializeField] GameObject star;
     Animation animLeft; // left barrierin animasyonu.
     Animation animRight; // right barrierin animasyonu.
     Animation animWin; // tool un platform degisme animasyonu.
-
+    [SerializeField] AnimationClip winClip;
+    [SerializeField] int target;
     float smooth = 3; // pith patin smooth lerp degerini saklar.
     bool finish; // oyunun basarili oldugunu belirtir.
     Vector3 newPosition;
@@ -30,7 +31,7 @@ public class FinishControl : MonoBehaviour
         playerMoved = FindObjectOfType<PlayerMoved>();
         animLeft = barrierLeft.GetComponent<Animation>();
         animRight = barrierRright.GetComponent<Animation>();
-        animWin = tool.GetComponent<Animation>();
+        animWin = toolParent.GetComponent<Animation>();
         newPosition = new Vector3(0f, 0f, pitPath.transform.position.z);
     }
 
@@ -45,19 +46,19 @@ public class FinishControl : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         // eger basarili ise win particleyi sesi ile beraber oynatip bariyerleri animasyon ile acar.
-        if (pitObject.GetCounter() >= 10 )//&& !finish)
+        if (pitObject.GetCounter() >= target && !finish)
         {
             finish = true;
-            Instantiate(winParticle, tool.transform.position, Quaternion.identity);
+            Instantiate(winParticle, toolParent.transform.GetChild(0).position, Quaternion.identity);
             animLeft.Play();
             animRight.Play();
-            star1.gameObject.GetComponent<Image>().sprite = starActive;
+            star.gameObject.GetComponent<Image>().sprite = starActive;
             yield return new WaitForSeconds(2f);
-            animWin.Play();
+            WinClipAnimation();
             pitObject.SetCounter(0);
         }
         // basarisiz oldugunu soyleyen ekrani yukler.
-        if (pitObject.GetCounter() < 10 && !finish)
+        if (pitObject.GetCounter() < target && !finish)
         {
             replayUI.SetActive(true);
             gamePlayUI.SetActive(false);
@@ -72,5 +73,16 @@ public class FinishControl : MonoBehaviour
 	    {
             pitPath.transform.position = Vector3.Lerp(pitPath.transform.position, newPosition, Time.deltaTime * smooth);
         }
+    }
+
+    void WinClipAnimation()
+    {
+        animWin.clip = winClip;
+        animWin.Play();
+    }
+
+    public int GetTarget()
+    {
+        return target;
     }
 }

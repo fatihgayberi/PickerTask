@@ -6,15 +6,16 @@ using UnityEngine.UI;
 public class PitObject : MonoBehaviour
 {
     FinishControl finishControl;
-    [SerializeField] GameObject firstObj;
-    [SerializeField] GameObject firstObjParticle;
+    [SerializeField] GameObject obj;
+    [SerializeField] GameObject objParticle;
     [SerializeField] Text counterTxt;
     Vector3 empty;
     static int counter = 0; // pite dusen Objleri sayar.
 
     private void Start()
     {
-        finishControl = FindObjectOfType<FinishControl>();
+        finishControl = gameObject.GetComponent<FinishControl>();
+        CounterText(counter);
     }
 
     // pite dusen objeleri siler ve particle olusturur.
@@ -26,7 +27,7 @@ public class PitObject : MonoBehaviour
     // pite dusen firstObj' yi particle olusturarak siler.
     void FirstObjDestroyer(Collider other)
     {
-        if (other.gameObject.name.Contains(firstObj.name))
+        if (other.gameObject.name.Contains(obj.name))
         {
             counter++;
             CounterText(counter);
@@ -34,7 +35,7 @@ public class PitObject : MonoBehaviour
             {
                 empty = other.transform.position;
             }
-            Instantiate(firstObjParticle, empty, Quaternion.identity);
+            Instantiate(objParticle, empty, Quaternion.identity);
             Destroy(other.transform.gameObject);
             StartCoroutine(finishControl.WinControl());
         }
@@ -52,6 +53,7 @@ public class PitObject : MonoBehaviour
 
     void CounterText(int count)
     {
-        counterTxt.text = count + " / 10";
+        string target = finishControl.GetTarget().ToString();
+        counterTxt.text = count + " / " + target;
     }
 }
